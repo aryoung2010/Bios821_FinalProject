@@ -1,0 +1,55 @@
+ ssh protocol
+ 
+ get data without downloading from browser (challenge)
+ 
+ 
+ https://www.kaggle.com/hugomathien/soccer/download ---It should only reside on your local copy of the project
+ 
+ ### Can start on local
+ 
+ #### create packages (like folders in addition example)
+ 
+ 
+ ### have a readme that specifies docker container you will need ---make sure you specify operating system if problematic
+ 
+ 
+ ### Need to have a virtual environment and explain how to use it
+ (either dockerfile or image using to describe/give instructions)
+ 
+ 1. Takes 3 positional parameters. 
+ 
+ 2. Conditionally downloads the file: https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5 and
+ stores it according to one of the positional parameters, if and only if it does not already exist. 
+ 
+ 3. The other 2 positiional parameters should be used to optionally move and decompress the database already on disk 
+ (i.e. soccer.zip). Only execute this code if the md5 sum within the esdb.md5 file matches that of the database you downloaded 
+ (i.e. soccer.zip).
+
+#### Geocoding and Sensitive information
+#### BASH
+
+geocoding each location in the country table. This should be done by creating a new table called latlong. This table should 
+contain 5 columns: id, country_id, country_name, lat, and long. You can use mapbox forward geocoding to accom- plish this. 
+Remember, you will need to accomplish all of this in a reproducible manner; specifically, you will need to create code that 
+accomplishes this task. 
+
+## using tools with sensitive information (login), git ignore
+You will need to sign up for an account on mapbox, but you are not required to enter credit card information. 
+Part of this process will require you to use sensitive information (i.e. your token) in your RESTful api calls. 
+Your code will need to know how to handle sensitive information without actually exposing it in the code.
+
+
+
+#### CREATE PACKAGE
+#### programming
+package the fuctionality in Task 2.B. You will need to create your own python package that contains the following
+components: 1. Well-defined application programming interface (api) 2. Uses Object Oriented Programming concepts, 
+including at least one subclass and one class property
+
+
+
+
+#### Jupyter Pipeline to execute
+build a pipeline that executes Component [1], [2], and [3] as
+well as implements new programming tasks that builds from these components.
+
