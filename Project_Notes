@@ -8,13 +8,16 @@
  https://www.kaggle.com/hugomathien/soccer/download ---It should only reside on your local copy of the project
  
     B. [note for user in Readme] (5 points) - completed
-    C. add to local version of project, but prevent from uploading (5 points)
+    C.0 add to local version of project, but prevent from uploading (5 points)
     
 TODO***
  
  ### Can start on local
 
  #### create packages (like folders in addition example)
+ 
+ C.1: Create a Docker container image
+ C.2: Create a virtual environment and describe how to use it in a dockerfile
  
  
  ### have a readme that specifies docker container you will need ---make sure you specify operating system if problematic
