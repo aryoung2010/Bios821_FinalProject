@@ -1,21 +1,31 @@
- ssh protocol
+3.2.1 git started- completed
+    A. ssh protocol (10 points)
  
+3.2.2 data retrieval
  get data without downloading from browser (challenge)
- 
- 
+ download the database from kaggle to local machine (separate from the code)--or automate if possible
+
  https://www.kaggle.com/hugomathien/soccer/download ---It should only reside on your local copy of the project
  
- ### Can start on local
+    B. [note for user in Readme] (5 points) - completed
+    C. add to local version of project, but prevent from uploading (5 points)
+    
+TODO***
  
+ ### Can start on local
+
  #### create packages (like folders in addition example)
  
  
  ### have a readme that specifies docker container you will need ---make sure you specify operating system if problematic
  
- 
  ### Need to have a virtual environment and explain how to use it
  (either dockerfile or image using to describe/give instructions)
- 
+
+    D. check md5 and position data in directory (10 points)
+    
+TODO****
+    
  1. Takes 3 positional parameters. 
  
  2. Conditionally downloads the file: https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5 and
@@ -24,6 +34,16 @@
  3. The other 2 positiional parameters should be used to optionally move and decompress the database already on disk 
  (i.e. soccer.zip). Only execute this code if the md5 sum within the esdb.md5 file matches that of the database you downloaded 
  (i.e. soccer.zip).
+
+
+ -- function(md_dir, current_dir, download)
+    -if md5 of download is in md_dir: 
+        move db to current_dir
+    --else go to webpage and download to current dir
+    -unzip file
+
+ 
+    E. use mapbox credentials (protected/ignored) to use api to geocode countries in table (10 points)
 
 #### Geocoding and Sensitive information
 #### BASH
@@ -39,11 +59,15 @@ Part of this process will require you to use sensitive information (i.e. your to
 Your code will need to know how to handle sensitive information without actually exposing it in the code.
 
 
+    F. Use object oriented programming to make a mapping object that replicates geocoding process,
+    and at least one subclass and one property (30 points)
 
 #### CREATE PACKAGE
 #### programming
 package the fuctionality in Task 2.B. You will need to create your own python package that contains the following
-components: 1. Well-defined application programming interface (api) 2. Uses Object Oriented Programming concepts, 
+components: 
+1. Well-defined application programming interface (api) 
+2. Uses Object Oriented Programming concepts, 
 including at least one subclass and one class property
 
 
@@ -52,4 +76,12 @@ including at least one subclass and one class property
 #### Jupyter Pipeline to execute
 build a pipeline that executes Component [1], [2], and [3] as
 well as implements new programming tasks that builds from these components.
+
+Pipeline Part 1: create jupyter notebook that implements process to conditionally obtain and decompress data (conditional download function)
+Pipeline Part 2: use table mapping package from earlier to create a new table of geocoded elements in repo (import packages)
+Pipeline Part 3: Derive a sql query that returns a data set that contains a column for country, a column for season, 
+                and a column for average number of goals scored per game for each country-season combination.(SQL)
+Pipeline Part 4: create a feature that labels whether a season is "good" using provided threshold (pandas)
+Pipeline Part 5: create a summary data frame that displays the number of “good seasons” for each country. (pandas)
+
 
