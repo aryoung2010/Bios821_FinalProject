@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 prepare_data() {
-  echo "soccer.zip" > F
-  echo "esdb.md5" > m
+  echo "soccer.zip" > F #### assign a variable rather than file
+  echo "esdb.md5" > m ##### assign variable rather than file
   cd $1
   if [[ -f $F ]]; then
     echo "$F exists"
