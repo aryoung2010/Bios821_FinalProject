@@ -40,9 +40,6 @@ prepare_data()
 }
 
 
-prepare_data $HOME/Downloads  $HOME/Documents/GitLab/md5s  $HOME/Documents/GitLab
-
-
 
 
 
