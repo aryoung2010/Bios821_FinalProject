@@ -61,4 +61,9 @@ To exit the container at any time and return to your local terminal , press ctrl
 
 
 ### The remaining scripts and codes should now be accessible through the European_Soccer_Database_Pipeline file
+This jupyter notebook walks through the process of unzipping the downloaded file, connecting to the soccer database, geocoding the
+latitude and longitude of countries and adding them to a new table in the database. Finally, there is script to create analytical
+datasets that look at the average number of goals scored per game per season for each country in the database, as well as a summary
+dataset that classifies and summarizes the number of "good seasons" listed in the database for each country. A "good season" is defined
+as a season where the average number of goals per game is greater than 2.75.
 
