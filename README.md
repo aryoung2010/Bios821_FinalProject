@@ -34,9 +34,31 @@ Once you have downloaded the data to your computer's Download Folder, created yo
 #### 3. Clone Repo to Local Machine
 Clone this repository to desired location on your local machine using gitlab.
 
-#### 4. Build and Run Docker Image
+
+#### 4. Build and Run Docker Image (if you do not have appropriate packages and software on your local machine)
 Next, start a docker image on your machine, using the provided Dockerfile. To do this, simply navigate from terminal to your local copy of the repo and type the following into bash:
 
-*docker build -t soccer*
+*"docker build -t soccer"*
 
+This will create a container image on your local machine, called soccer. The build process may take several minutes to complete. Once finished, you can check the image has been built correctly by typing the following into bash, and checking that "soccer" is listed.
+
+*"docker images"*
+
+Finally, to run the container, type the following into bash:
+
+*"docker run -it soccer bash"*
+
+This will open the container on your terminal. 
+
+#### 5. Open Repo in Jupyter Notebook or Lab
+From here, you can simply type 
+*"Jupyter Notebook"*
+into the terminal, and it will bring you to a web portal, where you will enter the token provided as part of the html link the first time you open Jupyter. You have the option to set a password for future, more efficient access. 
+
+Finally, you should see the repo on Jupyter Notebook, and be able to access the rest of the code via the jupyter notebook entitled "European_Soccer_Database_Pipeline".
+
+To exit the container at any time and return to your local terminal , press ctrl+d.
+
+
+### The remaining scripts and codes should now be accessible through the European_Soccer_Database_Pipeline file
 

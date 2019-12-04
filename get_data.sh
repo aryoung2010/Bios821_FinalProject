@@ -4,6 +4,7 @@ prepare_data()
 { f="soccer.zip" #### assign a variable rather than file
   F="soccer"
   m="esdb.md5" ##### assign variable rather than file
+  M="esdb"
   cd $1
   PWD
   if [[ -f "$f" ]]; then
@@ -20,8 +21,8 @@ prepare_data()
     curl https://gitlab.oit.duke.edu/bios821/european_soccer_database/raw/master/esdb.md5 > esdb.md5
     fi
   downloadm=$(md5 esdb.md5) #save md5 character/number string downloaded(32,end)  echo $downloadm
-  echo $downloadm > downloadS
-  substringD=$(cut -d ' ' -f 4 downloadS)
+  echo $downloadm 
+  substringD=$(cut -d ' ' -f 4 downloadm)
   echo $substringD
   cd $1
   echo $(md5 $f) > string #save md5 character/number string given(32,beginning)
