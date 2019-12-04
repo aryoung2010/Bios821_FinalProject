@@ -3,13 +3,6 @@ import sqlite3
 import os
 import requests
 
-
-### Connect to the database
-connection = sqlite3.connect("database.sqlite")
-
-# cursor
-crsr = connection.cursor()
-
 class MapBoxGeocoder:
     '''A class of geocoding tools for the Mapbox API'''
 
@@ -24,7 +17,7 @@ class MapBoxGeocoder:
         print("MapBoxGeocoder initiated")
 
     @property
-    def label_countries(self):
+    def labelCountries(self):
         for a,b in self.countries:
             self.words.append(b)
             self.ids.append(a)
@@ -39,6 +32,6 @@ class MapBoxGeocoder:
             self.lat.append(data['features'][0]['center'][1])
 
     @property
-    def package_table(self):
+    def packageTable(self):
         data_tuples = list(zip(self.ids, self.words, self.lat, self.long))
         return data_tuples
