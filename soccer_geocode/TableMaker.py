@@ -1,5 +1,4 @@
 
-
 def sql_fetch(con):
     '''Print all table names to preview table content'''
     cursorObj = con.cursor()
@@ -12,11 +11,12 @@ def tableMaker(con):
     '''Create the geocode table with foreign keys for country name and country id and
     put in a check on if the table exists, so it won't throw an error'''
     cursorObj = con.cursor()
-    tables = sql_fetch(connection)
+    tables = sql_fetch(con)
     if ('geocodes',) in tables:
         print("Table already exixts")
     else:
         cursorObj.execute("CREATE TABLE geocodes(id integer PRIMARY KEY, country_id integer, country_name text, lat real, long real, CONSTRAINT fk_country_id FOREIGN KEY (country_id) REFERENCES Country(id),CONSTRAINT fk_country_name FOREIGN KEY (country_name) REFERENCES Country(name))")
+        print("Geocodes table created")
     con.commit()
 
 def fetchCountries(con):
@@ -24,6 +24,7 @@ def fetchCountries(con):
     cursorObj = con.cursor()
     cursorObj.execute('SELECT * FROM Country')
     countries= cursorObj.fetchall()
+    print("Countries have been fetched")
     return countries
 
 def addValues(con, data_tuples):
@@ -34,6 +35,7 @@ def addValues(con, data_tuples):
         print(i,a,b,c,d)
         cursorObj.execute('INSERT INTO geocodes (id,country_id, country_name, lat, long) VALUES (?,?,?,?,?)', (i,a,b,c,d))
         i += 1
+    print ("Values added to Geocodes Table")
     con.commit()
 
 def fetchRows(con):
