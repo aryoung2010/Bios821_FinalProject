@@ -2,10 +2,6 @@
 import sqlite3
 import os
 import requests
-from sqlite3 import Error
-
-### Set API Key
-
 
 
 ### Connect to the database
